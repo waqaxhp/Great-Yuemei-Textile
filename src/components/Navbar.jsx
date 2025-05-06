@@ -1,5 +1,8 @@
+
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "./../assets/img/logo.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,7 +21,11 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-xl font-bold text-indigo-700">
+            <img src={logo} alt="Logo" className="h-10 w-auto mr-2" />
+            <span
+              className="text-xl font-bold"
+              style={{ color: "rgb(165, 35, 143)" }}
+            >
               Great Yuemei Textile
             </span>
           </div>
@@ -29,7 +36,8 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-indigo-700 font-medium"
+                className=" hover:text-[#003366] font-medium transition"
+                style={{ color: "rgb(165, 35, 143)" }}
               >
                 {item.name}
               </a>
@@ -40,7 +48,7 @@ const Navbar = () => {
           <div className="hidden md:flex">
             <a
               href="#quote"
-              className="ml-6 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
+              className="ml-6 bg-[#004C97] text-white px-4 py-2 rounded-lg hover:bg-[#003366] transition"
             >
               Get a Quote
             </a>
@@ -50,7 +58,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="text-gray-700 focus:outline-none"
+              className="text-[#004C97] focus:outline-none"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -66,14 +74,14 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-indigo-700 font-medium"
+                className="text-[#004C97] hover:text-[#003366] font-medium transition"
               >
                 {item.name}
               </a>
             ))}
             <a
               href="#quote"
-              className="mt-2 bg-indigo-600 text-white px-4 py-2 rounded-lg text-center hover:bg-indigo-700 transition"
+              className="mt-2 bg-[#004C97] text-white px-4 py-2 rounded-lg text-center hover:bg-[#003366] transition"
             >
               Get a Quote
             </a>

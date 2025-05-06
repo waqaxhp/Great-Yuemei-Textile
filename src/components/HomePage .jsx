@@ -6,19 +6,7 @@ const HomePage = () => {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* YouTube Background Video */}
-      {/* <div className="absolute top-0 left-0 w-full h-full -z-10">
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=8N0CRZiuB8Q"
-          playing
-          loop
-          muted
-          controls={false}
-          width="100%"
-          height="100%"
-          className="react-player object-cover"
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
-      </div> */}
+
       <div className="absolute inset-0 -z-10">
         <ReactPlayer
           url="https://www.youtube.com/watch?v=8N0CRZiuB8Q"
